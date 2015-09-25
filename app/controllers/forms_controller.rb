@@ -63,6 +63,11 @@ class FormsController < ApplicationController
     render "num_4_display"
   end
 
+  def num_4_process
+    @mood = params['mood']
+    render 'num_4_process'
+  end
+
   def num_5_display
     #=== Problem ================================
     # - A user should be able to navigate to
@@ -73,6 +78,11 @@ class FormsController < ApplicationController
     #============================================
 
     render "num_5_display"
+  end
+
+  def num_5_process
+    @email = params['email']
+    render 'num_5_process'
   end
 
   def num_6_display

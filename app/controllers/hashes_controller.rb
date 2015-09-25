@@ -38,7 +38,7 @@ class HashesController < ApplicationController
 
     address = { "correct" => "Sears", "incorrect" => "Willis"}
 
-    @result = "replace this string with your answer"
+    @result = address['correct']
     render 'hashes'
   end
 
@@ -73,7 +73,7 @@ class HashesController < ApplicationController
                     }
                   }
 
-    @result = "replace this string with your answer"
+    @result = attraction['address']['street']
     render 'hashes'
   end
 
@@ -100,6 +100,7 @@ class HashesController < ApplicationController
     #============================================
 
     attraction = { "first_name" => "Sears"}
+    attraction['last_name'] = "Tower"
 
     @result = "#{attraction['first_name']} #{attraction['last_name']}"
     render "hashes"
@@ -133,7 +134,7 @@ class HashesController < ApplicationController
       {"name" => "Macbook air 13in", "price" => 999}
     ]
 
-    @result = "replace this string with your answer"
+    @result = products[1]['name']
     render 'hashes'
   end
 
@@ -153,7 +154,7 @@ class HashesController < ApplicationController
       ]
     }
 
-    @result = "replace this string with your answer"
+    @result = data['users'][2]['email']
     render 'hashes'
   end
 end
